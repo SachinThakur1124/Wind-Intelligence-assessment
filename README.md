@@ -3,6 +3,8 @@
 > **Production-grade energy analytics platform evaluating Great Britain Day-Ahead wind generation forecast accuracy against actual outturns using official Elexon BMRS datasets for the January 2026 decision cohort.**
 
 [![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-blue?logo=github)](https://github.com/SachinThakur1124/Wind-Intelligence-assessment)
+[![Vercel Deployment](https://img.shields.io/badge/Vercel-Live%20Dashboard-black?logo=vercel)](https://wind-intelligence-assessment.vercel.app)
+[![Render Backend](https://img.shields.io/badge/Render-Live%20API-46E3B7?logo=render)](https://wind-intelligence-assessment.onrender.com/api/health)
 [![Backend Tests](https://img.shields.io/badge/pytest-17%20passed-emerald)](backend/tests)
 [![Frontend Tests](https://img.shields.io/badge/vitest-9%20passed-blue)](frontend/src/tests)
 [![Python](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/)
@@ -10,11 +12,11 @@
 [![React](https://img.shields.io/badge/react-18.2+-61dafb.svg)](https://react.dev/)
 
 ### Project Links & Submission Assets
-- **GitHub Repository**: [https://github.com/SachinThakur1124/Wind-Intelligence-assessment](https://github.com/SachinThakur1124/Wind-Intelligence-assessment)
+- **Live Deployed Frontend (Vercel - Verified)**: [https://wind-intelligence-assessment.vercel.app](https://wind-intelligence-assessment.vercel.app)
 - **Live Backend API (Render - Verified)**: [https://wind-intelligence-assessment.onrender.com](https://wind-intelligence-assessment.onrender.com)
 - **Backend API Health Check**: [https://wind-intelligence-assessment.onrender.com/api/health](https://wind-intelligence-assessment.onrender.com/api/health)
 - **Interactive Swagger / OpenAPI Docs**: [https://wind-intelligence-assessment.onrender.com/docs](https://wind-intelligence-assessment.onrender.com/docs)
-- **Live Deployed Frontend (Vercel)**: [https://wind-intelligence-assessment.vercel.app](https://wind-intelligence-assessment.vercel.app) *(or your deployed Vercel domain)*
+- **GitHub Repository**: [https://github.com/SachinThakur1124/Wind-Intelligence-assessment](https://github.com/SachinThakur1124/Wind-Intelligence-assessment)
 - **10-Minute Video Demo (YouTube)**: *[Record and link following DEMO_SCRIPT.md]*
 
 ---
