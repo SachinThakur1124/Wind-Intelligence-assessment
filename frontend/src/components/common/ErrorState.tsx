@@ -18,6 +18,9 @@ export const ErrorState: React.FC<ErrorStateProps> = ({ message, onRetry }) => {
       <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">
         {message}
       </p>
+      <p className="mt-2 text-[11px] text-slate-400 dark:text-slate-500">
+        Note: If connecting to a free-tier cloud backend (e.g. Render), services spin down during inactivity and take ~45 seconds to wake up.
+      </p>
       <button
         onClick={onRetry}
         className="mt-4 inline-flex items-center px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold shadow-sm transition active:scale-95"
