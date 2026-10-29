@@ -1,5 +1,4 @@
 services:
-  # Python FastAPI Backend
   - type: web
     name: wind-intelligence-backend
     runtime: python
@@ -24,7 +23,6 @@ services:
       - key: CORS_ORIGINS
         value: "https://wind-intelligence-dashboard.vercel.app,http://localhost:5173,http://localhost:3000"
 
-  # React Vite Frontend (Alternative Static Site on Render)
     - type: static
     name: wind-intelligence-frontend
   
