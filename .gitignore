@@ -4,18 +4,19 @@ __pycache__/
 *$py.class
 *.so
 .Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
+# Python build artifacts
+/build/
+/develop-eggs/
+/dist/
+/downloads/
+/eggs/
+/.eggs/
+/lib/
+/lib64/
+/parts/
+/sdist/
+/var/
+/wheels/
 *.egg-info/
 .installed.cfg
 *.egg
@@ -25,6 +26,10 @@ htmlcov/
 .env
 .env.*
 !.env.example
+
+# Unignore source lib directories
+!frontend/src/lib/
+!frontend/src/lib/**
 
 # Node / Frontend
 node_modules/
