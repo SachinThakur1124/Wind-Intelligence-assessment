@@ -11,8 +11,10 @@
 
 ### Project Links & Submission Assets
 - **GitHub Repository**: [https://github.com/SachinThakur1124/Wind-Intelligence-assessment](https://github.com/SachinThakur1124/Wind-Intelligence-assessment)
-- **Live Deployed Frontend (Vercel)**: *[Configure via Vercel following Section 12]*
-- **Backend API Health Endpoint (Render)**: *[Configure via Render following Section 12]*
+- **Live Backend API (Render - Verified)**: [https://wind-intelligence-assessment.onrender.com](https://wind-intelligence-assessment.onrender.com)
+- **Backend API Health Check**: [https://wind-intelligence-assessment.onrender.com/api/health](https://wind-intelligence-assessment.onrender.com/api/health)
+- **Interactive Swagger / OpenAPI Docs**: [https://wind-intelligence-assessment.onrender.com/docs](https://wind-intelligence-assessment.onrender.com/docs)
+- **Live Deployed Frontend (Vercel)**: [https://wind-intelligence-assessment.vercel.app](https://wind-intelligence-assessment.vercel.app) *(or your deployed Vercel domain)*
 - **10-Minute Video Demo (YouTube)**: *[Record and link following DEMO_SCRIPT.md]*
 
 ---
@@ -359,18 +361,24 @@ curl -X GET "http://localhost:8000/api/overview?decision_month=2026-01&cutoff_ti
 
 The application is architected for zero-configuration deployment to **Vercel** (Frontend) and **Render** (Backend):
 
-### Backend Deployment (Render)
-1. Fork or push this repository to GitHub.
-2. In Render, select **New > Blueprint** and connect the repository (it automatically detects `render.yaml`).
-3. Render automatically provisions the Python 3.12 FastAPI service with healthcheck `/api/health`.
-4. Copy the public backend URL (e.g., `https://wind-intelligence-api.onrender.com`).
+### Backend Deployment (Render - Live & Verified)
+- **Live Service URL**: `https://wind-intelligence-assessment.onrender.com`
+- **Health Check Endpoint**: `https://wind-intelligence-assessment.onrender.com/api/health`
+- **Interactive Documentation**: `https://wind-intelligence-assessment.onrender.com/docs`
+- **Configured Environment Variables**:
+  - `ELEXON_BASE_URL`: `https://data.elexon.co.uk/bmrs/api/v1`
+  - `DEFAULT_CUTOFF_TIME`: `11:00`
+  - `CACHE_TTL_SECONDS`: `3600`
+  - `CORS_ORIGINS`: `*`
+  - `CORS_ORIGIN_REGEX`: `^https:\/\/.*\.vercel\.app$`
 
 ### Frontend Deployment (Vercel)
-1. In Vercel, select **Add New > Project** and import the repository.
+1. In Vercel (`https://vercel.com/new`), import `SachinThakur1124/Wind-Intelligence-assessment`.
 2. Set Root Directory to `frontend`.
 3. Add Environment Variable:
-   - `VITE_API_BASE_URL`: `https://wind-intelligence-api.onrender.com`
-4. Click **Deploy**. Vercel detects `vite` and applies `vercel.json` SPA routing rewrites automatically.
+   - `VITE_API_BASE_URL`: `https://wind-intelligence-assessment.onrender.com`
+   *(Note: `frontend/vercel.json` also has built-in `/api/(.*)` rewrites that automatically proxy to the Render backend even if this variable is omitted).*
+4. Click **Deploy**. Vercel detects `vite`, builds the production bundle, and activates the live URL.
 
 ---
 
