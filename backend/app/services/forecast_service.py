@@ -196,7 +196,6 @@ class ForecastService:
         while cur_date <= delivery_end_date:
             decision_date, cutoff_dt = self.compute_decision_cutoff(cur_date, cutoff_time_str)
             cutoff_str = format_utc(cutoff_dt)
-            dec_date_str = cur_date.strftime("%Y-%m-%d")
 
             # 48 half-hour settlement periods per standard day (or up to 50 on clock change)
             # In January, standard GMT (48 periods, each 30 mins)
