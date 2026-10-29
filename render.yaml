@@ -1,41 +1,39 @@
 services:
   - type: web
-    name: wind-intelligence-backend
-    runtime: python
-  
-    plan: free
-    buildCommand: pip install -r backend/requirements.txt
-    startCommand: cd backend && uvicorn app.main:app --host 0.0.0.0 --port $PORT
-    healthCheckPath: /api/health
-    envVars:
-      - key: PYTHON_VERSION
-        value: 3.12.2
-      - key: ELEXON_BASE_URL
-        value: https://data.elexon.co.uk/bmrs/api/v1
-      - key: DEFAULT_CUTOFF_TIME
-        value: "11:00"
-      - key: CACHE_TTL_SECONDS
-        value: "3600"
-      - key: REQUEST_TIMEOUT_SECONDS
-        value: "30"
-      - key: MAX_RETRIES
-        value: "3"
-      - key: CORS_ORIGINS
-        value: "https://wind-intelligence-dashboard.vercel.app,http://localhost:5173,http://localhost:3000"
-
-    - type: static
-    name: wind-intelligence-frontend
-  
-    plan: free
-    buildCommand: cd frontend && npm install && npm run build
-    staticPublishPath: ./frontend/dist
-    routes:
-      - type: rewrite
-        source: /*
-        destination: /index.html
-    envVars:
-      - key: VITE_API_BASE_URL
-        fromService:
-          type: web
-          name: wind-intelligence-backend
-          property: host
+      name: wind-intelligence-backend
+          runtime: python
+              plan: free
+                  buildCommand: pip install -r backend/requirements.txt
+                      startCommand: cd backend && uvicorn app.main:app --host 0.0.0.0 --port $PORT
+                          healthCheckPath: /api/health
+                              envVars:
+                                    - key: PYTHON_VERSION
+                                            value: "3.12.2"
+                                                  - key: ELEXON_BASE_URL
+                                                          value: "https://data.elexon.co.uk/bmrs/api/v1"
+                                                                - key: DEFAULT_CUTOFF_TIME
+                                                                        value: "11:00"
+                                                                              - key: CACHE_TTL_SECONDS
+                                                                                      value: "3600"
+                                                                                            - key: REQUEST_TIMEOUT_SECONDS
+                                                                                                    value: "30"
+                                                                                                          - key: MAX_RETRIES
+                                                                                                                  value: "3"
+                                                                                                                        - key: CORS_ORIGINS
+                                                                                                                                value: "https://wind-intelligence-dashboard.vercel.app,http://localhost:5173,http://localhost:3000"
+                                                                                                                                
+                                                                                                                                  - type: static
+                                                                                                                                      name: wind-intelligence-frontend
+                                                                                                                                          plan: free
+                                                                                                                                              buildCommand: cd frontend && npm install && npm run build
+                                                                                                                                                  staticPublishPath: ./frontend/dist
+                                                                                                                                                      routes:
+                                                                                                                                                            - type: rewrite
+                                                                                                                                                                    source: /*
+                                                                                                                                                                            destination: /index.html
+                                                                                                                                                                                envVars:
+                                                                                                                                                                                      - key: VITE_API_BASE_URL
+                                                                                                                                                                                              fromService:
+                                                                                                                                                                                                        type: web
+                                                                                                                                                                                                                  name: wind-intelligence-backend
+                                                                                                                                                                                                                            property: host
