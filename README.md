@@ -2,12 +2,18 @@
 
 > **Production-grade energy analytics platform evaluating Great Britain Day-Ahead wind generation forecast accuracy against actual outturns using official Elexon BMRS datasets for the January 2026 decision cohort.**
 
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-blue?logo=github)](https://github.com/SachinThakur1124/Wind-Intelligence-assessment)
 [![Backend Tests](https://img.shields.io/badge/pytest-17%20passed-emerald)](backend/tests)
 [![Frontend Tests](https://img.shields.io/badge/vitest-9%20passed-blue)](frontend/src/tests)
 [![Python](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.110+-teal.svg)](https://fastapi.tiangolo.com/)
 [![React](https://img.shields.io/badge/react-18.2+-61dafb.svg)](https://react.dev/)
-[![License](https://img.shields.io/badge/license-MIT-gray.svg)](LICENSE)
+
+### Project Links & Submission Assets
+- **GitHub Repository**: [https://github.com/SachinThakur1124/Wind-Intelligence-assessment](https://github.com/SachinThakur1124/Wind-Intelligence-assessment)
+- **Live Deployed Frontend (Vercel)**: *[Configure via Vercel following Section 12]*
+- **Backend API Health Endpoint (Render)**: *[Configure via Render following Section 12]*
+- **10-Minute Video Demo (YouTube)**: *[Record and link following DEMO_SCRIPT.md]*
 
 ---
 
