@@ -28,7 +28,6 @@ services:
   - type: web
     name: wind-intelligence-frontend
     runtime: static
-    region: frankfurt
     plan: free
     buildCommand: cd frontend && npm install && npm run build
     staticPublishPath: ./frontend/dist
