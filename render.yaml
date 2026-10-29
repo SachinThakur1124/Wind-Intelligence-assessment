@@ -25,9 +25,9 @@ services:
         value: "https://wind-intelligence-dashboard.vercel.app,http://localhost:5173,http://localhost:3000"
 
   # React Vite Frontend (Alternative Static Site on Render)
-  - type: web
+    - type: static
     name: wind-intelligence-frontend
-    runtime: static
+  
     plan: free
     buildCommand: cd frontend && npm install && npm run build
     staticPublishPath: ./frontend/dist
